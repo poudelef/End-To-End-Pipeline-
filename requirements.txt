@@ -1,7 +1,4 @@
-python
 tensorflow
 numpy
 pandas
-os
-pathlib
-zipfile
+wget
