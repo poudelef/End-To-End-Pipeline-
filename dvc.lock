@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: 6f0b8d38a327d8adaa6545dafebae8cf
+      size: 2465
+    outs:
+    - path: data/DeepLearning_data_2type_auto/test
+      hash: md5
+      md5: 165df43dd553dbdcbf83ed16ad1df5b9.dir
+      size: 135995593
+      nfiles: 2136
+    - path: data/DeepLearning_data_2type_auto/train
+      hash: md5
+      md5: 8cd995e44867fbd9849c603798c54fb6.dir
+      size: 317143874
+      nfiles: 4977
+  data preprocessing:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 7e518e0eded3102fd0c4480f4764efad
+      size: 2445
+  create_model:
+    cmd: python src/create_model.py
+    deps:
+    - path: src/create_model.py
+      hash: md5
+      md5: 6e36f9338ddfcf4fc7c7844c8cfb8690
+      size: 2860

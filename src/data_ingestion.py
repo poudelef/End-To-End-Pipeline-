@@ -12,8 +12,8 @@ def load_data(url: str | None = None) -> Path:
     - Otherwise, try to download ZIP from `url`, extract it, and return the dataset root.
     """
     
-    # parents[2] -> End-To-End-Pipeline-
-    project_root = Path(__file__).resolve().parents[2]
+    # parents[1] -> End-To-End-Pipeline-
+    project_root = Path(__file__).resolve().parents[1]
     extract_path = project_root / "data"
     dataset_root = extract_path / "DeepLearning_data_2type_auto"
 
@@ -62,3 +62,4 @@ def load_data(url: str | None = None) -> Path:
     except requests.exceptions.RequestException as e:
         print("Error in load_data (download failed):", e)
         raise
+

@@ -1,6 +1,7 @@
 # src/modeling.py
 import tensorflow as tf
 
+
 def build_and_train_resnet50(
     train_ds, val_ds,
     num_classes,
@@ -85,3 +86,4 @@ def build_and_train_resnet50(
     )
 
     return model, {"warmup": warmup_hist, "finetune": finetune_hist}
+
