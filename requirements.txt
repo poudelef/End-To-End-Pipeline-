@@ -1,4 +1,6 @@
 tensorflow
 numpy
 pandas
-wget
+requests
+scikit-learn
+dvc

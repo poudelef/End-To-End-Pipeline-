@@ -1,0 +1,7 @@
+stages:
+  build_and_train_model:
+    cmd: python src/train_pipeline.py
+    deps:
+      - src/train_pipeline.py
+    outs:
+      - models/resnet50.keras
